@@ -1,4 +1,4 @@
-name = "backenimg2img"
+name = 'cl'
 main = "src/index.js"
 compatibility_date = "2024-07-25"
 
