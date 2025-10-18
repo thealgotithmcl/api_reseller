@@ -25,11 +25,20 @@ export const generateWithGemini = async (env, base64ImageData, mimeType, sceneDe
         },
     };
 
-    const result = await model.generateContent([sceneDescription, imagePart]);
-    const response = await result.response;
-    const text = response.text();
+    try {
+        console.log('Before model.generateContent');
+        const result = await model.generateContent([sceneDescription, imagePart]);
+        console.log('After model.generateContent');
+        const response = await result.response;
+        console.log('After result.response');
+        const text = response.text();
+        console.log('After response.text()');
 
-    // Assuming the response is the generated image or relevant data
-    // This might need adjustment based on the actual Gemini API response structure for image generation
-    return { generated_text: text };
+        // Assuming the response is the generated image or relevant data
+        // This might need adjustment based on the actual Gemini API response structure for image generation
+        return { generated_text: text };
+    } catch (error) {
+        console.error('Error in generateWithGemini:', error);
+        throw error; // Re-throw the error so it can be caught by the generationController
+    }
 };
