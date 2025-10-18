@@ -9,3 +9,10 @@ compatibility_date = "2024-07-25"
 binding = "DB" # i.e. env.DB
 database_name = "backenimg2img-db"
 database_id = "e58a4c41-a26e-4370-9d01-dc81b00729e5"
+
+[observability]
+[observability.logs]
+enabled = false
+head_sampling_rate = 1
+invocation_logs = true
+persist = true
