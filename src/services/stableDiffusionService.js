@@ -7,7 +7,7 @@
  * @param {object} options Additional options for the generation.
  * @returns {Promise<object>} An object containing the generated image data.
  */
-const generateWithStableDiffusion = async (imageBuffer, mimeType, prompt, options) => {
+export const generateWithStableDiffusion = async (imageBuffer, mimeType, prompt, options) => {
     // User Implementation Required:
     // This function is a placeholder. You need to replace this with a call
     // to your chosen Stable Diffusion API provider (e.g., Replicate, Stability.ai, or a self-hosted endpoint).
@@ -51,8 +51,4 @@ const generateWithStableDiffusion = async (imageBuffer, mimeType, prompt, option
 
     // --- Throwing error until implemented ---
     throw new Error('StableDiffusion service is not implemented. Please configure it in services/stableDiffusionService.js');
-};
-
-module.exports = {
-    generateWithStableDiffusion,
 };
