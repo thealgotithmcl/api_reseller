@@ -8,4 +8,3 @@ compatibility_date = "2024-07-25"
 [[d1_databases]]
 binding = "DB" # i.e. env.DB
 database_name = "backenimg2img-db"
-database_id = "a4c98339-a517-4e48-823a-13c1321b6353"
