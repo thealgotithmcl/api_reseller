@@ -1,6 +1,6 @@
 import { json, error } from 'itty-router';
 import { generateWithGemini } from '../services/geminiService';
-import { generateWithStableDiffusion } from '../services/stableDiffusionService';
+
 
 export const generateImage = async (request, env) => {
     try {
